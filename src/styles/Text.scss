@@ -1,0 +1,98 @@
+@import "global";
+
+// SIZE
+$s100: 100px;
+$s30: 30px;
+$s24: 24px;
+$s20: 20px;
+$s16: 16px;
+$s12: 12px;
+$s10: 10px;
+
+// FONT
+$serif: "Noe Display";
+$sans: "Source Code Pro", monospace;
+
+// COLOR
+$primary: #00f4d7;
+$secondary: #f5f2fd;
+$alert: #fb5a5a;
+$warning: #ffd848;
+
+.s100 {
+  font-size: $s100 !important;
+}
+.s30 {
+  font-size: $s30 !important;
+}
+.s24 {
+  font-size: $s24 !important;
+}
+.s20 {
+  font-size: $s20 !important;
+}
+.s16 {
+  font-size: $s16 !important;
+}
+.s12 {
+  font-size: $s12 !important;
+}
+.s10 {
+  font-size: $s10 !important;
+}
+
+.serif {
+  font-family: $serif !important;
+}
+.sans {
+  font-family: $sans !important;
+}
+
+.primary {
+  color: $primary !important;
+}
+.secondary {
+  color: $light-blue !important;
+}
+.alert {
+  color: $alert !important;
+}
+.warning {
+  color: $warning !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.caps {
+  text-transform: uppercase !important;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: $s30;
+  color: $primary;
+}
+
+h2 {
+  font-family: $serif;
+  font-size: $s24;
+  color: $primary;
+}
+
+p {
+  font-family: $sans;
+  font-size: $s12;
+  color: $primary;
+}
+
+span {
+  font-family: $sans;
+  font-size: $s10;
+  color: $secondary;
+}
+
+div {
+  font-family: $sans;
+}
