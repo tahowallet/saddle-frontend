@@ -1,4 +1,5 @@
 @import "../styles/theme";
+@import "../styles/svgIcons";
 
 div.confirmTransaction {
   margin-top: 0;
@@ -14,11 +15,13 @@ div.confirmTransaction {
     font-size: 30px;
   }
 
-  svg {
+  .iconSaddle {
     margin-top: 40px;
     margin-bottom: 40px;
 
-    fill: var(--sign-graph);
+    @include svg($icon-saddle-svg, $primary-blue);
+    content: '';
+    display: inline-block;
 
     background-color: var(--background-logo);
     border-radius: 240px;

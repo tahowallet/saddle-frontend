@@ -121,12 +121,13 @@ div.deposit {
     @include breakpoint(md) {
       max-width: 90%;
     }
-    svg.triangle {
+    .iconArrow {
       margin-left: 10px;
       transform: norotate(0deg);
-    }
-    svg.upsideDown.triangle {
-      transform: rotate(-180deg);
+
+      &.upsideDown {
+        transform: rotate(-180deg);
+      }
     }
 
     .divider {

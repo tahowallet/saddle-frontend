@@ -4,6 +4,7 @@
 * Used everywhere
 */
 @import "fonts";
+@import "svgIcons";
 @import "theme";
 
 * {
@@ -26,7 +27,6 @@ h5 {
   font-family: $font-family-title;
 }
 
-svg,
 img {
   // TODO: get rid of this once chakra is more integrated
   display: inline !important;

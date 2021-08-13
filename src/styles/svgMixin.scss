@@ -1,0 +1,33 @@
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+@function url-color($color) {
+    @if type-of($color) == string {
+        $color: unquote($color);
+    }
+    @if str-index(inspect($color), '#') == 1 {
+        @return '%23' + str-slice('#{$color}', 2, -1);
+    }
+    @return $color;
+}
+@mixin svg($svg-list, $fill: false, $stroke: false, $stroke-width: false, $bg-size: contain, $bg-color: transparent, $bg-position: 0 0) {
+    width: nth($svg-list, 1);
+    height: nth($svg-list, 2);
+    $background-image: nth($svg-list, 3);
+    @if $fill {
+        $background-image: str-replace($background-image, '%3Csvg', "%3Csvg fill='" + url-color($fill) + "'");
+    }
+    @if $stroke {
+        $background-image: str-replace($background-image, '%3Csvg', "%3Csvg stroke='" + url-color($stroke) + "'");
+    }
+    @if $stroke-width {
+        $background-image: str-replace($background-image, '%3Csvg', "%3Csvg stroke-width='" + $stroke-width + "'");
+    }
+    background: url('data:image/svg+xml,' + $background-image) no-repeat center $bg-color;
+    background-size: $bg-size;
+    background-position: $bg-position;
+}

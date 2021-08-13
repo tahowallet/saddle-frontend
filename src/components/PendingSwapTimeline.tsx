@@ -1,8 +1,5 @@
 import React, { ReactElement } from "react"
 
-import { ReactComponent as ArrowDownIcon } from "../assets/icons/arrowDown.svg"
-import { ReactComponent as CheckIcon } from "../assets/icons/check.svg"
-import { ReactComponent as ClockIcon } from "../assets/icons/clock.svg"
 import { PendingSwap } from "../hooks/usePendingSwapData"
 import classNames from "classnames"
 import { commify } from "../utils"
@@ -142,11 +139,11 @@ const TimelineStep = ({
 }>) => {
   let iconEl = null
   if (icon === "check") {
-    iconEl = <CheckIcon />
+    iconEl = <span className="iconCheck"></span>
   } else if (icon === "clock") {
-    iconEl = <ClockIcon />
+    iconEl = <span className="iconClock"></span>
   } else if (icon === "arrow") {
-    iconEl = <ArrowDownIcon />
+    iconEl = <span className="iconArrowDown"></span>
   }
   return (
     <div

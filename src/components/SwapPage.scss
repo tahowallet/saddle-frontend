@@ -1,5 +1,6 @@
 @import "../styles/theme";
 @import "../styles/viewports";
+@import "../styles/svgIcons";
 
 div.swapPage {
   min-height: 100vh;
@@ -66,11 +67,26 @@ div.swapPage {
     margin-left: 4px;
     padding: 0;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
 
     &:hover {
       transform: none;
     }
   }
+
+  .exchNote {
+      display: flex;
+      align-items: center;
+  }
+  .iconSwap {
+      @include svg($icon-swap-svg, '#3800D6');
+      content: '';
+      width: 24px;
+      height: 20px;
+      display: inline-block;
+  }
+
 
   .exchangeWarning {
     color: $white;
@@ -88,9 +104,14 @@ div.swapPage {
     margin-top: 32px;
     .title {
       cursor: pointer;
-      svg {
-        margin-left: 10px;
+
+      .iconArrow {
+        @include svg($icon-arrow-svg, '#00f4d7');
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
         transform: norotate(0deg);
+
         &.upsideDown {
           transform: rotate(-180deg);
         }

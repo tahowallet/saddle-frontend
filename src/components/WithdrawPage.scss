@@ -134,13 +134,6 @@ div.withdraw {
     @include breakpoint(md) {
       max-width: 90%;
     }
-    svg.triangle {
-      margin-left: 10px;
-      transform: norotate(0deg);
-    }
-    svg.upsideDown.triangle {
-      transform: rotate(-180deg);
-    }
 
     .divider {
       width: 100%;

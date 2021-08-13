@@ -3,19 +3,16 @@ import "./Toast.scss"
 import React, { ReactElement } from "react"
 
 import classNames from "classnames"
-import iconCancelCircle from "../assets/icons/iconCancelCircle.svg"
-import iconCheckCircle from "../assets/icons/iconCheckCircle.svg"
-import iconWaitingCircle from "../assets/icons/iconWaitingCircle.svg"
 
 type ToastType = "error" | "success" | "pending"
 function getIconForType(type: ToastType): string {
   switch (type) {
     case "error":
-      return iconCancelCircle
+      return "iconCancelCircle"
     case "success":
-      return iconCheckCircle
+      return "iconCheckCircle"
     case "pending":
-      return iconWaitingCircle
+      return "iconWaitingCircle"
   }
 }
 export interface ToastProps {
@@ -31,7 +28,7 @@ export default function Toast({
   return (
     <div className={classNames("toast", `toast-${type}`)} onClick={onClick}>
       <div className="title">
-        <img src={getIconForType(type)} alt="A notification icon" />
+        <span className={getIconForType(type)}></span>
         <span>{title}</span>
       </div>
     </div>

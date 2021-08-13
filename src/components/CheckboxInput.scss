@@ -1,4 +1,5 @@
 @import "../styles/theme";
+@import "../styles/svgIcons";
 
 .checkboxInput {
   cursor: pointer;
@@ -14,15 +15,17 @@
     background-color: $white;
   }
 
-  .checkboxControl > svg {
+  .checkboxControl > .iconCheckbox {
+    @include svg($icon-checkbox-svg, 'transparent', $primary, '6');
+    content: '';
+    display: block !important;
+
     margin: 0;
     width: 20px;
     height: 20px;
-    stroke: var(--text-selected);
     transition: transform 0.1s ease-in 25ms;
     transform: scale(0);
     transform-origin: bottom left;
-    display: block !important;
   }
 
   & > input {
@@ -30,7 +33,7 @@
     height: 24px;
 
     display: none;
-    &:checked + .checkboxControl svg {
+    &:checked + .checkboxControl .iconCheckbox {
       transform: scale(1);
     }
   }

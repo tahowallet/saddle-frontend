@@ -6,18 +6,10 @@
     &.active {
       color: $primary;
       border-color: $primary;
-      svg {
-        fill: $primary;
-        stroke: $primary;
-      }
     }
     &.inactive {
       color: var(--text-lightest);
       border-color: var(--text-lightest);
-      svg {
-        fill: var(--text-lightest);
-        stroke: var(--text-lightest);
-      }
     }
   }
   .timelineLine {
