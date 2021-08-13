@@ -75,10 +75,6 @@ div.swapPage {
     }
   }
 
-  .exchNote {
-      display: flex;
-      align-items: center;
-  }
   .iconSwap {
       @include svg($icon-swap-svg, '#3800D6');
       content: '';

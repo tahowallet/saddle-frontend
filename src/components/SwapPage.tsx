@@ -18,7 +18,6 @@ import { PendingSwap } from "../hooks/usePendingSwapData"
 import ReviewSwap from "./ReviewSwap"
 import SlippageField from "./SlippageField"
 import SwapInput from "./SwapInput"
-import Text from "./Text"
 import type { TokenOption } from "../pages/Swap"
 import TopMenu from "./TopMenu"
 import { Zero } from "@ethersproject/constants"
@@ -102,41 +101,6 @@ const SwapPage = (props: Props): ReactElement => {
       <div className="content">
         <div className="swapForm">
           <div className="row">
-            <Text type="title" color="primary" size="large">
-              Title
-            </Text>
-            <Text type="ticker" color="secondary">
-              Ticker
-            </Text>
-            <Text type="label">Label: Price Impact</Text>
-            <Text type="price">Price: $10.00</Text>
-            <Text type="conversion">Conversion: ~$0.0</Text>
-          </div>
-          <div className="row">
-            <span className="icon iconArrow"></span>
-            <span className="icon iconArrowDown"></span>
-            <span className="icon iconCancelCircle"></span>
-            <span className="icon iconChange"></span>
-          </div>
-          <div className="row">
-            <span className="icon iconCheckbox"></span>
-            <span className="icon iconCheckCircle"></span>
-            <span className="icon iconChevron"></span>
-            <span className="icon iconClock"></span>
-          </div>
-          <div className="row">
-            <span className="icon iconCopy"></span>
-            <span className="icon iconSaddle"></span>
-            <span className="icon iconSearch"></span>
-            <span className="icon iconSwap"></span>
-          </div>
-          <div className="row">
-            <span className="icon iconWaitingCircle"></span>
-            <span className="icon iconWithdraw"></span>
-          </div>
-        </div>
-        <div className="swapForm">
-          <div className="row">
             <h3 className="swapTitle">{t("from")}</h3>
             <div className="balanceContainer">
               <span>{t("balance")}:</span>
@@ -187,7 +151,7 @@ const SwapPage = (props: Props): ReactElement => {
           <div style={{ height: "24px" }}></div>
           {fromState.symbol && toState.symbol && (
             <div className="row">
-              <div className="exchNote">
+              <div>
                 <span>{t("rate")}</span>
                 &nbsp;
                 <span>{exchangeRateInfo.pair}</span>
