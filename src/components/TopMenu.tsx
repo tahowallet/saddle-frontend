@@ -3,10 +3,10 @@ import "./TopMenu.scss"
 import React, { ReactElement } from "react"
 
 import { Link } from "react-router-dom"
+import { ReactComponent as Logo } from "../assets/icons/logo.svg"
 import ThemeChanger from "./ThemeChanger"
 import Web3Status from "./Web3Status"
 import classNames from "classnames"
-import logo from "../assets/icons/logo.svg"
 import { useTranslation } from "react-i18next"
 
 interface Props {
@@ -17,10 +17,10 @@ function TopMenu({ activeTab }: Props): ReactElement {
   const { t } = useTranslation()
 
   return (
-    <header className="top" style={{ border: "#000, solid 3px" }}>
+    <header className="top">
       <div className="logoWrapper">
         <Link to="/">
-          <img className="logo" alt="logo" src={logo} />
+          <Logo />
         </Link>
       </div>
 
